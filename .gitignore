@@ -37,4 +37,5 @@ yarn-error.*
 
 app-example
 
-.firebaseconfig
+# girebase config file
+firebaseconfig.js
