@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Pressable, Alert, StyleSheet } from 'react-native';
 import { Link, useRouter } from 'expo-router';
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
-// import { initializeApp } from 'firebase/app';
-// import { firebaseConfig } from '../firebaseconfig'; 
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth'; 
 import { app } from '@/firebaseconfig';
-// import { signInWithEmailAndPassword } from 'firebase/auth';
+
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
@@ -16,8 +14,8 @@ const LoginScreen = () => {
   const handleLogin = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then(() => {
-        router.navigate('./news');
-        console.log(email, password);
+        router.navigate('./components/news');
+        // console.log(email, password);
       })
       .catch(error => Alert.alert('Error', error.message));
   };
