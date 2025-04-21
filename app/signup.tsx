@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, Pressable, Alert, StyleSheet } from 'react-native';
 import { Link, useRouter } from 'expo-router';
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
-// import { initializeApp } from 'firebase/app';
-// import { firebaseConfig } from '../firebaseconfig'; 
-// import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { app } from '../firebaseconfig';
 
 const SignUpScreen = () => {
@@ -18,7 +15,7 @@ const SignUpScreen = () => {
           createUserWithEmailAndPassword(auth,email, password)
           .then(() => {
               Alert.alert('Success', 'Account created successfully');
-              () => router.navigate('./login');
+              router.navigate('./login');
           })
       .catch(error => Alert.alert('Error', error.message));
   };
