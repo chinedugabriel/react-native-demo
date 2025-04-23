@@ -6,6 +6,7 @@ import { StyleSheet, Text, View } from "react-native";
 // import AlertBox from "./alertBox";
 // import FooterNav from "./footerNav";
 import LoginScreen from "./login";
+// import WecomeScreen from "./welcome";
 
 
 
@@ -13,6 +14,7 @@ const Index = () => {
   return (
     <View>
       <LoginScreen />
+      {/* <WecomeScreen /> */}
     </View>
   
   );

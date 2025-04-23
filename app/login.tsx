@@ -14,7 +14,7 @@ const LoginScreen = () => {
   const handleLogin = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then(() => {
-        router.navigate('./components/news');
+        router.navigate('./welcome');
         // console.log(email, password);
       })
       .catch(error => Alert.alert('Error', error.message));
